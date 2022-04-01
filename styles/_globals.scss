@@ -92,6 +92,7 @@ body{
     width: 90vw;
     top: 15vh;
     padding: 20px;
+    border-radius: 15px;
 
     &__star-container{
         background-color: hsl(216, 12%, 54%);
@@ -106,4 +107,30 @@ body{
             height: 15px;
         }
     }
+
+    &__h1{
+        color: white;
+    }
+    &__p{
+        color: hsl(217, 12%, 63%);
+    }
+    &__grade-main-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    &__button{
+        background-color: hsl(25, 97%, 53%);
+        border: none;
+        width: 100%;
+        height: 40px;
+        color: white;
+        text-transform: uppercase;
+        border-radius: 25px;
+        
+    }
+}
+
+.grade-container{
+    background-color: aliceblue;
+    width: 30px;
 }

@@ -100,6 +100,7 @@ body {
   width: 90vw;
   top: 15vh;
   padding: 20px;
+  border-radius: 15px;
 }
 
 .main-container__star-container {
@@ -121,5 +122,36 @@ body {
 .main-container__star-container__star {
   width: 15px;
   height: 15px;
+}
+
+.main-container__h1 {
+  color: white;
+}
+
+.main-container__p {
+  color: #959eac;
+}
+
+.main-container__grade-main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-container__button {
+  background-color: #fb7413;
+  border: none;
+  width: 100%;
+  height: 40px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 25px;
+}
+
+.grade-container {
+  background-color: aliceblue;
+  width: 30px;
 }
 /*# sourceMappingURL=styles.css.map */
