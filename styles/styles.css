@@ -101,6 +101,7 @@ body {
   top: 15vh;
   padding: 20px;
   border-radius: 15px;
+  max-width: 300px;
 }
 
 .main-container__star-container {
@@ -124,11 +125,11 @@ body {
   height: 15px;
 }
 
-.main-container__h1 {
+.main-container__h1, .main-container .ty-state__h1 {
   color: white;
 }
 
-.main-container__p {
+.main-container__p, .main-container .ty-state__p {
   color: #959eac;
 }
 
@@ -153,5 +154,15 @@ body {
 .grade-container {
   background-color: aliceblue;
   width: 30px;
+}
+
+.ty-state__selection-container {
+  display: none;
+}
+
+.ty-state__selection {
+  color: #fb7413;
+  background-color: #7c8798;
+  width: auto;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -93,6 +93,7 @@ body{
     top: 15vh;
     padding: 20px;
     border-radius: 15px;
+    max-width: 300px;
 
     &__star-container{
         background-color: hsl(216, 12%, 54%);
@@ -108,10 +109,10 @@ body{
         }
     }
 
-    &__h1{
+    &__h1, .ty-state__h1{
         color: white;
     }
-    &__p{
+    &__p, .ty-state__p{
         color: hsl(217, 12%, 63%);
     }
     &__grade-main-container{
@@ -133,4 +134,14 @@ body{
 .grade-container{
     background-color: aliceblue;
     width: 30px;
+}
+
+.ty-state__selection-container{
+  display:none;
+}
+
+.ty-state__selection{
+  color: hsl(25, 97%, 53%);
+  background-color:hsl(216, 12%, 54%);
+  width: auto;
 }
