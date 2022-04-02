@@ -136,6 +136,10 @@ body{
         text-transform: uppercase;
         border-radius: 25px;
     }
+    &__button:hover{
+        color: hsl(25, 97%, 53%);
+        background-color: white;
+    }
 }
 
 .grade-container{
@@ -148,6 +152,10 @@ body{
     align-items: center;
     color: hsl(217, 12%, 63%);
     margin-bottom: 15px;
+}
+.grade-container:hover { 
+    color: white;
+    background-color: hsl(25, 97%, 53%);
 }
 
 .ty-state{

@@ -158,6 +158,11 @@ body {
   border-radius: 25px;
 }
 
+.main-container__button:hover {
+  color: #fb7413;
+  background-color: white;
+}
+
 .grade-container {
   background-color: #303a46;
   width: 40px;
@@ -174,6 +179,11 @@ body {
           align-items: center;
   color: #959eac;
   margin-bottom: 15px;
+}
+
+.grade-container:hover {
+  color: white;
+  background-color: #fb7413;
 }
 
 .ty-state {
