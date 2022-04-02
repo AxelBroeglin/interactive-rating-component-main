@@ -97,18 +97,18 @@ body {
 .main-container {
   background-color: #252d37;
   position: absolute;
-  width: 90vw;
+  width: 94vw;
   top: 15vh;
-  padding: 20px;
+  padding: 30px;
   border-radius: 15px;
-  max-width: 300px;
+  max-width: 340px;
 }
 
 .main-container__star-container {
-  background-color: #7c8798;
-  border-radius: 25px;
-  width: 30px;
-  height: 30px;
+  background-color: #303a46;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,6 +118,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 15px;
 }
 
 .main-container__star-container__star {
@@ -127,18 +128,22 @@ body {
 
 .main-container__h1, .main-container .ty-state__h1 {
   color: white;
+  margin-bottom: 15px;
 }
 
 .main-container__p, .main-container .ty-state__p {
   color: #959eac;
+  margin-bottom: 15px;
 }
 
 .main-container__grade-main-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .main-container__button {
@@ -152,17 +157,50 @@ body {
 }
 
 .grade-container {
-  background-color: aliceblue;
-  width: 30px;
+  background-color: #303a46;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #959eac;
+  margin-bottom: 15px;
 }
 
-.ty-state__selection-container {
-  display: none;
+.ty-state {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ty-state__img {
+  margin-bottom: 25px;
 }
 
 .ty-state__selection {
   color: #fb7413;
-  background-color: #7c8798;
   width: auto;
+  background-color: #303a46;
+  border-radius: 25px;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 20px;
+}
+
+.ty-state__p {
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
