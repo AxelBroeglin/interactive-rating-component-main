@@ -84,6 +84,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Overpass', sans-serif;
 }
 
 .main-container{
@@ -114,6 +115,7 @@ body{
     &__h1, .ty-state__h1{
         color: white;
         margin-bottom: 15px;
+        font-weight: 700;
     }
     &__p, .ty-state__p{
         color: hsl(217, 12%, 63%);
