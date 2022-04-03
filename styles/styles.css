@@ -161,6 +161,7 @@ body {
 .main-container__button:hover {
   color: #fb7413;
   background-color: white;
+  cursor: pointer;
 }
 
 .grade-container {
@@ -184,6 +185,7 @@ body {
 .grade-container:hover {
   color: white;
   background-color: #fb7413;
+  cursor: pointer;
 }
 
 .ty-state {
@@ -197,6 +199,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
 .ty-state__img {
