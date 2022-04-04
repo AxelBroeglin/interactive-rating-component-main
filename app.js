@@ -7,8 +7,13 @@ displayed on next screen
 from screen 2
 */
 
-const btn = document.getElementsByClassName('main-container__button')
+//document.getElementsByClassName creates an array. It needs to be used as such
+const gradeContainers = document.getElementsByClassName('gradeContainer')
+console.log(gradeContainers)
 
-//btn.addEventListener('click', function onClick() {
-    
-});
+//For loop to install the event listener on all the gradeContainers
+for (const gradeContainer of gradeContainers) {
+    gradeContainer.addEventListener('click', function onClick() {
+      console.log('box clicked');
+    });
+  }
