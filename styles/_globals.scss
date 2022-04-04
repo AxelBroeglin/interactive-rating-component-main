@@ -160,6 +160,11 @@ body{
     cursor: pointer;
 }
 
+.active{
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
 .ty-state{
     display: flex;
     flex-direction: column;

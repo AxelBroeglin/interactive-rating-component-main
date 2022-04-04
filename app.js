@@ -8,14 +8,22 @@ from screen 2
 */
 
 //document.getElementsByClassName creates an array. It needs to be used as such
-const gradeContainers = document.getElementsByClassName('gradeContainer')
-console.log(gradeContainers)
 
-//For loop to install the event listener on all the gradeContainers
-for (const gradeContainer of gradeContainers) {
-    gradeContainer.addEventListener('click', function onClick() {
-      console.log('box clicked');
-      gradeContainer.style.backgroundColor = 'hsl(25, 97%, 53%)';
-      gradeContainer.style.color = 'white';
-    });
-  }
+const gradeContainers = document.querySelectorAll('.gradeContainer');
+
+gradeContainers.forEach((gradeContainer) => {
+    gradeContainer.addEventListener('click', () => {
+    removeClasses();
+    addClasses(gradeContainer);
+  });
+});
+
+function removeClasses() {
+    gradeContainers.forEach((gradeContainer) => {
+    gradeContainer.classList.remove("active");
+  });
+}
+
+function addClasses(gradeContainer) {
+    gradeContainer.classList.add("active");
+}

@@ -188,6 +188,11 @@ body {
   cursor: pointer;
 }
 
+.active {
+  background-color: #fb7413;
+  color: white;
+}
+
 .ty-state {
   display: -webkit-box;
   display: -ms-flexbox;
