@@ -15,5 +15,7 @@ console.log(gradeContainers)
 for (const gradeContainer of gradeContainers) {
     gradeContainer.addEventListener('click', function onClick() {
       console.log('box clicked');
+      gradeContainer.style.backgroundColor = 'hsl(25, 97%, 53%)';
+      gradeContainer.style.color = 'white';
     });
   }
