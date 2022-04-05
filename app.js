@@ -10,11 +10,13 @@ from screen 2
 //document.getElementsByClassName creates an array. It needs to be used as such
 
 const gradeContainers = document.querySelectorAll('.gradeContainer');
+const gradeActive = document.querySelectorAll('.active');
 
 gradeContainers.forEach((gradeContainer) => {
     gradeContainer.addEventListener('click', () => {
     removeClasses();
     addClasses(gradeContainer);
+    removeActive();
   });
 });
 
@@ -26,4 +28,10 @@ function removeClasses() {
 
 function addClasses(gradeContainer) {
     gradeContainer.classList.add("active");
+}
+
+function removeActive() {
+  if (gradeContainer.classList.contains('active')) {
+    gradeContainer.classList.remove("active");
+  }
 }
