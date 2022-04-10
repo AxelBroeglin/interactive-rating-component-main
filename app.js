@@ -11,7 +11,7 @@ from screen 2
 
 const gradeContainers = document.querySelectorAll('.gradeContainer');
 //const gradeActive = document.querySelectorAll('.active');
-
+const gradeID = '';
 //const submitBtn = document.querySelectorAll('.main-container__button');
 // Button is recognized onclick
 const submitBtn = document.getElementById('main-container__button');
@@ -26,7 +26,6 @@ submitBtn.addEventListener('click', function(){
 gradeContainers.forEach((gradeContainer) => {
     gradeContainer.addEventListener('click', () => {
       gradeContainers.forEach((gradeContainer) => {
-        
         gradeContainer.classList.remove('active');
       });    
       if (gradeContainer.classList.contains("active")) {
