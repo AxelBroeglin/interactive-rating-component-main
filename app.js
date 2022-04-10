@@ -12,14 +12,21 @@ from screen 2
 const gradeContainers = document.querySelectorAll('.gradeContainer');
 //const gradeActive = document.querySelectorAll('.active');
 
-const submitBtn = document.querySelectorAll('.main-container__button');
+//const submitBtn = document.querySelectorAll('.main-container__button');
 // Button is recognized onclick
-console.log(submitBtn)
+const submitBtn = document.getElementById('main-container__button');
+const mainState = document.getElementById('main-state');
+const tyState = document.getElementById('ty-state');
+submitBtn.addEventListener('click', function(){
+    mainState.style.display = 'none';
+    tyState.style.display = 'flex'
+});
 
 //Add class Active to clicked grade
 gradeContainers.forEach((gradeContainer) => {
     gradeContainer.addEventListener('click', () => {
       gradeContainers.forEach((gradeContainer) => {
+        
         gradeContainer.classList.remove('active');
       });    
       if (gradeContainer.classList.contains("active")) {
@@ -32,13 +39,28 @@ gradeContainers.forEach((gradeContainer) => {
 });
 
 // Console logs what user clicked and adds class to it. Problem : has document, not precise enough.
-  document.addEventListener('click', function handleClick(event) {
-    console.log('user clicked: ', event.target);
+//  document.addEventListener('click', function handleClick(event) {
+//    console.log('user clicked: ', event.target);
     
-    event.target.classList.add('bg-yellow');
-  });
+ //   event.target.classList.add('test');
+ // });
 
-// Displays Hello world when button is clicked
-  document.getElementById("main-container__button").addEventListener("click", function() {
-    alert("Hello World!");
-  });
+
+// element.addEventListener(event, function, useCapture)
+// event : click, mouse down...
+// useCapture : true or false, optinnal
+
+const onClick = function() {
+  this.innerHTML;
+}
+document.getElementById('1').onclick = onClick;
+document.getElementById('2').onclick = onClick;
+document.getElementById('3').onclick = onClick;
+document.getElementById('4').onclick = onClick;
+document.getElementById('5').onclick = onClick;
+
+
+const spanResult = document.getElementById('span-result')
+const content = spanResult.innerHTML;
+
+spanResult.innerHTML = onClick;
