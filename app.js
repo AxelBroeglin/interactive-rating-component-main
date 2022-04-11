@@ -7,24 +7,30 @@ displayed on next screen
 from screen 2
 */
 
-//document.getElementsByClassName creates an array. It needs to be used as such
-
+//Takes all elements with the class gradeContainer
 const gradeContainers = document.querySelectorAll('.gradeContainer');
-//const gradeActive = document.querySelectorAll('.active');
-const gradeID = '';
-//const submitBtn = document.querySelectorAll('.main-container__button');
-// Button is recognized onclick
+//Creates let to display result
+let gradeDisplay = document.getElementById('span-result');
+// Submit button
 const submitBtn = document.getElementById('main-container__button');
+//First state/div
 const mainState = document.getElementById('main-state');
+// Final state/div
 const tyState = document.getElementById('ty-state');
-submitBtn.addEventListener('click', function(){
-    mainState.style.display = 'none';
-    tyState.style.display = 'flex'
-});
+
+
 
 //Add class Active to clicked grade
 gradeContainers.forEach((gradeContainer) => {
     gradeContainer.addEventListener('click', () => {
+      // element
+      var elt = this;
+      // id de l'element
+      var idElt = gradeContainer.getAttribute('id');
+      console.log(idElt);
+      gradeDisplay.innerHTML = idElt;
+
+      //Remove Active
       gradeContainers.forEach((gradeContainer) => {
         gradeContainer.classList.remove('active');
       });    
@@ -37,29 +43,8 @@ gradeContainers.forEach((gradeContainer) => {
   });
 });
 
-// Console logs what user clicked and adds class to it. Problem : has document, not precise enough.
-//  document.addEventListener('click', function handleClick(event) {
-//    console.log('user clicked: ', event.target);
-    
- //   event.target.classList.add('test');
- // });
-
-
-// element.addEventListener(event, function, useCapture)
-// event : click, mouse down...
-// useCapture : true or false, optinnal
-
-const onClick = function() {
-  this.innerHTML;
-}
-document.getElementById('1').onclick = onClick;
-document.getElementById('2').onclick = onClick;
-document.getElementById('3').onclick = onClick;
-document.getElementById('4').onclick = onClick;
-document.getElementById('5').onclick = onClick;
-
-
-const spanResult = document.getElementById('span-result')
-const content = spanResult.innerHTML;
-
-spanResult.innerHTML = onClick;
+//On click on button -> shows final state
+submitBtn.addEventListener('click', function(){
+  mainState.style.display = 'none';
+  tyState.style.display = 'flex';
+});
