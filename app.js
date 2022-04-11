@@ -18,22 +18,21 @@ const mainState = document.getElementById('main-state');
 // Final state/div
 const tyState = document.getElementById('ty-state');
 
-
-
+let idElt = null;
+console.log(idElt)
 //Add class Active to clicked grade
 gradeContainers.forEach((gradeContainer) => {
     gradeContainer.addEventListener('click', () => {
       // element
-      var elt = this;
+      elt = this;
       // id de l'element
-      var idElt = gradeContainer.getAttribute('id');
-      console.log(idElt);
+      idElt = gradeContainer.getAttribute('id');
+      // Adds the value of idElt to gradeDisplay HTML
       gradeDisplay.innerHTML = idElt;
-
-      //Remove Active
+      //Remove Active state
       gradeContainers.forEach((gradeContainer) => {
         gradeContainer.classList.remove('active');
-      });    
+      });
       if (gradeContainer.classList.contains("active")) {
         gradeContainer.classList.remove("active");
       }
@@ -45,6 +44,11 @@ gradeContainers.forEach((gradeContainer) => {
 
 //On click on button -> shows final state
 submitBtn.addEventListener('click', function(){
-  mainState.style.display = 'none';
-  tyState.style.display = 'flex';
+  if (idElt == null){
+    alert('Please pick a grade');
+  }
+  else{
+    mainState.style.display = 'none';
+    tyState.style.display = 'flex';  
+  }
 });

@@ -159,8 +159,6 @@ body {
 }
 
 .main-container__button:hover {
-  color: #fb7413;
-  background-color: white;
   cursor: pointer;
 }
 
